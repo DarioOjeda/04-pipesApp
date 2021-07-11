@@ -8,7 +8,3 @@ html, body {
 .text-layout {
     color: var(--text-color);
 }
-
-.card {
-    margin-top: 10px;
-}
