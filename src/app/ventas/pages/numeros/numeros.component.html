@@ -12,6 +12,21 @@
                 subheader="del año actual">
             <i class="pi pi-dollar"></i>  <!-- icono propio de PrimeNg, no angular-->
             {{ ventasNetas | number:'1.2-2' }}
+            <!-- El 1 del principio indica que queremos toda la parte entera y el 2-2, que queremos justo 2 decimales -->
+        </p-card>
+    </div>
+
+    <div class="p-col-4">
+        <p-card header="Ventas Brutas"
+                subheader="del año actual">
+            {{ (ventasNetas + 2000000) | currency:'USD':'symbol-narrow':'1.4-4' }}
+        </p-card>
+    </div>
+
+    <div class="p-col-4">
+        <p-card header="Ganancia porcentual"
+                subheader="del año actual">
+            {{ porcentaje | percent:'2.2-2'}}
         </p-card>
     </div>
 </div>
