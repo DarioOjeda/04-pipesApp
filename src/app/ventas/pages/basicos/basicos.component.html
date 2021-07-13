@@ -52,6 +52,15 @@
                 <li> fecha | date:'MMMM' </li>
                 <li> fecha | date:'MMMM dd, yyyy' </li>
             </ul>
+
+            <hr>
+            <ul>
+                <li> fecha | date:'long':'GMT-6' </li>
+                <li> fecha | date:'long':'GMT-4' </li>
+                <li> fecha | date:'long':'':'en' </li>
+                <li> fecha | date:'long':'':'fr' </li>
+                <li> fecha | date:'long':'':'es-HN' </li>
+            </ul>
         </p-card>
     </div>
     <div class="p-col-6">
@@ -64,6 +73,18 @@
                 <li>{{ fecha | date:'shortTime' }}</li>
                 <li>{{ fecha | date:'MMMM' }}</li>
                 <li>{{ fecha | date:'MMMM dd, yyyy' }}</li>
+            </ul>
+            <hr>
+            <ul>
+                <li> {{ fecha | date:'long':'GMT-6'}} </li>
+                <li> {{ fecha | date:'long':'GMT-4'}} </li>
+                <li> {{ fecha | date:'long':'':'en'}} <!--</li> si queremos que vuelva a ingles
+                y ya hemos cambiao el idioma locale a español, como es el caso -->
+                <li> {{ fecha | date:'long':'':'fr'}}</li>
+                <!-- Este ya hay que registrarlo nuevamente, el ingles ya lo trae angular por defecto, pero el frances no -->
+                <!-- Véase en app.module.ts -->
+                <li> {{ fecha | date:'long':'':'es-HN'}}</li>
+                <!-- Parece ser que el locale es se trae todos los tipos de español o, por lo menos, este no da ningún pete -->
             </ul>
         </p-card>
     </div>
