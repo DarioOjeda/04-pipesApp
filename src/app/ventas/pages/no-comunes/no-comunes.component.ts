@@ -9,10 +9,9 @@ import { PrimeNGConfig } from 'primeng/api';
 })
 export class NoComunesComponent implements OnInit {
 
-  constructor(private primengConfig: PrimeNGConfig) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.primengConfig.ripple = true;
   }
 
 }
