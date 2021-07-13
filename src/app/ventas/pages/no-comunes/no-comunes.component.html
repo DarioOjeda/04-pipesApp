@@ -11,7 +11,12 @@
     <!-- Esto es media reactive de bootstrap -->
     <div class="p-col p-md-6 p-sm-9">
         <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
-            Content
+            
+            Saludos {{ nombre }}, me congratula
+            {{ genero | i18nSelect:invitacionMapa}}
+            al evento.
+        
+        
         </p-fieldset>
     </div>
 
