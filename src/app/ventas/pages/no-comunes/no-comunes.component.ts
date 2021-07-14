@@ -40,6 +40,14 @@ export class NoComunesComponent{
       this.clientes.pop();
     }
   }
+
+  //KeyValue Pipe
+
+  persona = {
+    nombre: 'Darío',
+    edad: 35,
+    direccion: 'Calle las veras. Nº 12'
+  }
  
 
 }
