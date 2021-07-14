@@ -75,7 +75,32 @@
 
         </p-fieldset>
 
+        <div class="p-col p-md-6 p-sm-9">
+            <p-fieldset legend="Json Pipe" [toggleable]="true">
+                
+                <pre>{{ heroes | json }}
+                </pre>
+    
+            </p-fieldset>
+    
+        </div>
+
+        <div class="p-col p-md-6 p-sm-9">
+            <p-fieldset legend="Async Pipe" [toggleable]="true">
+                
+                <pre><b>Valor del observable: </b>{{ miObservable | async }}</pre>
+                <!-- El pipe async se suscribe internamente al observable y emite cada uno de sus valores -->
+                <pre><b>Valor de la promesa: </b>{{ valorPromesa | async }}</pre>
+                <!-- También podría mostrarse el json de la promesa, pero es incómodo -->
+
+                <pre *ngIf="!(valorPromesa | async)">Resolviendo promesa</pre>
+            </p-fieldset>
+    
+        </div>
+
     </div>
+
+    
 
     
     

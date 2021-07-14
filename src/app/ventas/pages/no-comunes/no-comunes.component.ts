@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-no-comunes',
@@ -48,6 +49,37 @@ export class NoComunesComponent{
     edad: 35,
     direccion: 'Calle las veras. Nº 12'
   }
+
+  //Json pipe
+
+  heroes = [
+    {
+      nombre: 'Superman',
+      vuela: true
+    },
+    {
+      nombre: 'Robin',
+      vuela: false
+    },
+    {
+      nombre: 'Superman',
+      vuela: false
+    }
+  ]
+
+  //Async pipe
+  miObservable = interval(1000);
+  // Esto es un observable que va a estar emitiendo valores numéricos
  
+  //si quisiera ver esos valores en consola:
+  // constructor() {
+  //   this.miObservable.subscribe( console.log );
+  // }
+
+  valorPromesa = new Promise( (resolve, reject) => {
+    setTimeout(() => {
+      resolve( 'Tenemos data de promesa' );
+    }, 3500);
+  });
 
 }
