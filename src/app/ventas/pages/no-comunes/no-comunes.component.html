@@ -43,6 +43,27 @@
 
     </div>
 
+    <div class="p-col p-md-6 p-sm-9">
+        <p-fieldset legend="Slice Pipe" [toggleable]="true">
+            
+            <b>Original</b>
+            <pre>{{ clientes }}</pre>
+            <!-- imprimiendo directamente el objeto, Angular no re renderiza -->
+            <!-- Con la directiva ngFor de clientes si pasaría -->
+
+            <b>slice:0:2</b>
+            <!-- El slice en cambio, hace comprobaciones cada vez que cambia el objeto y sí re-renderiza -->
+            <pre>{{ clientes | slice:0:2}}</pre>
+
+            <b>slice:1:2</b>
+            <pre>{{ clientes | slice:1:2}}</pre>
+
+            <b>slice:3:4</b>
+            <pre>{{ clientes | slice:3:4}}</pre>
+        </p-fieldset>
+
+    </div>
+
     
     
 
