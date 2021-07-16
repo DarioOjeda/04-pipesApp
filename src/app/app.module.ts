@@ -25,7 +25,7 @@ registerLocaleData( localeFr );
     BrowserModule,
     BrowserAnimationsModule,
     SharedModule,
-    VentasModule
+    VentasModule,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'es'}
