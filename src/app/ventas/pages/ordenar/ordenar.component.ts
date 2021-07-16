@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { noop } from 'rxjs';
+import { ColorPrin, Heroe } from '../../interfaces/ventas.interfaces';
 
 @Component({
   selector: 'app-ordenar',
@@ -9,6 +11,28 @@ import { Component } from '@angular/core';
 export class OrdenarComponent{
 
   enMayusculas: boolean = true;
+  heroes: Heroe[] = [
+    {
+      nombre: 'Superman',
+      vuela: true,
+      color: ColorPrin.azul
+    },
+    {
+      nombre: 'Batman',
+      vuela: false,
+      color: ColorPrin.negro
+    },
+    {
+      nombre: 'Deadpool',
+      vuela: false,
+      color: ColorPrin.rojo
+    },
+    {
+      nombre: 'Silver Surfer',
+      vuela: true,
+      color: ColorPrin.plateado
+    }
+  ];
 
   cambiarMayus(): void {
     this.enMayusculas = !this.enMayusculas;
